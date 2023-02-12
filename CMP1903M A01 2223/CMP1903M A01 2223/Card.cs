@@ -11,14 +11,17 @@ namespace CMP1903M_A01_2223
         //Base for the Card class.
         //Value: numbers 1 - 13
         //Suit: numbers 1 - 4
-        //The 'set' methods for these properties could have some validation
-        public int Value { get; set; }
-        public int Suit { get; set; }
+        
+        private int value;
+        private int suit;
 
-        public Card(int value, int suit)
+        public Card(int Value, int Suit)
         {
-            Value = value;
-            Suit = suit;
+            value = Value;
+            suit = Suit;
         }
+
+        public int Value { get { return value; } }
+        public int Suit { get { return suit; } }
     }
 }

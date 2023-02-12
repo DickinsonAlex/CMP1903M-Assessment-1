@@ -6,3 +6,11 @@ C:\Users\P2152\Downloads\CMP1903M Object Oriented Programming A01 2223\CMP1903M 
 C:\Users\P2152\Downloads\CMP1903M Object Oriented Programming A01 2223\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.csproj.CoreCompileInputs.cache
 C:\Users\P2152\Downloads\CMP1903M Object Oriented Programming A01 2223\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.exe
 C:\Users\P2152\Downloads\CMP1903M Object Oriented Programming A01 2223\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.pdb
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\bin\Debug\CMP1903M A01 2223.exe.config
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\bin\Debug\CMP1903M A01 2223.exe
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\bin\Debug\CMP1903M A01 2223.pdb
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.csproj.AssemblyReference.cache
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.csproj.SuggestedBindingRedirects.cache
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.csproj.CoreCompileInputs.cache
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.exe
+E:\Github Repositories\CMP1903M-Assessment-1\CMP1903M A01 2223\CMP1903M A01 2223\obj\Debug\CMP1903M A01 2223.pdb

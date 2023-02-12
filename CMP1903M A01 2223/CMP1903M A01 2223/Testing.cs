@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CMP1903M_A01_2223
 {
-    class Program
+    class Testing
     {
         static void Main(string[] args)
         {
@@ -17,32 +14,51 @@ namespace CMP1903M_A01_2223
             Console.WriteLine("How many cards do you want to deal?");
             
             int numCards = 0;
+            bool success = false;
             while (numCards < 1 || numCards > 52) //Error Trapping the input
             {
-                try //Error trapping to see if a number is entered
+                try //Error trapping to see if an integer is entered
                 {
                     numCards = Convert.ToInt32(Console.ReadLine());
+                    success = true;
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Please enter a number between 1 and 52");
+                    Console.WriteLine("Please enter a valid number between 1 and 52");
                     numCards = 0;
+                }
+                finally
+                {
+                    if (success && (numCards < 1 || numCards > 52)) //Error trapping to see if the number is between 1 and 52
+                    {
+                        Console.WriteLine("Please enter a valid number between 1 and 52");
+                    }
+                    success = false;
                 }
             }
 
             //Ask the user what shuffle to use
-            Console.WriteLine("Which shuffle do you want to use? (1) Overhand, (2) Riffle, (3) Fisher-Yates");
+            Console.WriteLine("Which shuffle do you want to use? (1) Fisher-Yates, (2) Riffle, (3) None ");
             int shuffle = 0;
             while (shuffle < 1 || shuffle > 3) //Error Trapping the input
             {
-                try //Error trapping to see if a number is entered
+                try //Error trapping to see if an integer is entered
                 {
                     shuffle = Convert.ToInt32(Console.ReadLine());
+                    success = true;
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Please enter a valid number");
                     shuffle = 0;
+                }
+                finally
+                {
+                    if (success && (shuffle < 1 || shuffle > 3)) //Error trapping to see if the number is between 1 and 3
+                    {
+                        Console.WriteLine("Please enter a valid number");
+                    }
+                    success = false;
                 }
             }
             

@@ -22,21 +22,6 @@ namespace CMP1903M_A01_2223
                 }
             }
         }
-
-        public void overhandShuffle()
-        {
-            //Overhand shuffle the pack
-            Random rnd = new Random();
-            int n = pack.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rnd.Next(n + 1);
-                Card value = pack[k];
-                pack[k] = pack[n];
-                pack[n] = value;
-            }
-        }
         
         public void riffleShuffle()
         {
@@ -74,16 +59,15 @@ namespace CMP1903M_A01_2223
             switch (typeOfShuffle)
             {
                 case 1:
-                    //Overhand Shuffle
-                    overhandShuffle();
+                    //Fisher-Yates Shuffle
+                    fisherYatesShuffle();
                     break;
                 case 2:
                     //Riffle Shuffle
                     riffleShuffle();
                     break;
                 case 3:
-                    //Fisher-Yates Shuffle
-                    fisherYatesShuffle();
+                    //No Shuffle
                     break;
             }
         }
