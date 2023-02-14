@@ -8,7 +8,7 @@ namespace CMP1903M_A01_2223
 {
     class Pack
     {
-        List<Card> pack;
+        static List<Card> pack;
         
         public Pack()
         {
@@ -71,20 +71,20 @@ namespace CMP1903M_A01_2223
                     break;
             }
         }
-        public static Card deal(List<Card> pack)
+        public static Card deal()
         {
             //Deals a card from the pack
             Card dealtCard = pack[pack.Count - 1];
             pack.RemoveAt(pack.Count - 1);
             return dealtCard;
         }
-        public static List<Card> dealCards(int amount, Pack newPack)
+        public static List<Card> dealCards(int amount)
         {
             //Deals the number of cards specified by 'amount'
             List<Card> dealtCards = new List<Card>();
             for (int i = 1; i <= amount; i++)
             {
-                dealtCards.Add(deal(newPack.pack));
+                dealtCards.Add(deal());
             }
             return dealtCards;
         }

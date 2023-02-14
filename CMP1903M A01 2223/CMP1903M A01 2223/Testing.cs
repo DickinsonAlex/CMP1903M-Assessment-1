@@ -66,7 +66,7 @@ namespace CMP1903M_A01_2223
             pack.shuffleCardPack(shuffle);
 
             //Deal the cards and add them to dealt cards
-            List<Card> dealtCards = Pack.dealCards(numCards, pack);
+            List<Card> dealtCards = Pack.dealCards(numCards);
 
             //Print the dealt cards
             string[] suits = new string[] { "Clubs", "Diamonds", "Hearts", "Spades" }; //This is just to make the output look nicer
