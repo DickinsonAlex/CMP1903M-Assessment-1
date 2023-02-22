@@ -1,27 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMP1903M_A01_2223
+﻿namespace CMP1903M_A01_2223
 {
     class Card
     {
         //Base for the Card class.
         //Value: numbers 1 - 13
         //Suit: numbers 1 - 4
-        
-        private int value;
-        private int suit;
 
-        public Card(int Value, int Suit)
+        public int Value { get; set; }
+        public int Suit { get; set; }
+
+        public Card(int value, int suit)
         {
-            value = Value;
-            suit = Suit;
+            Value = value;
+            Suit = suit;
         }
 
-        public int Value { get { return value; } }
-        public int Suit { get { return suit; } }
+        //Add a set method with validation
+        public void setValue(int value)
+        {
+            if (value >= 1 && value <= 13)
+            {
+                Value = value;
+            }
+        }
+
+        //Set suit method with validation
+        public void setSuit(int suit)
+        {
+            if (suit >= 1 && suit <= 4)
+            {
+                Suit = suit;
+            }
+        }
     }
 }
