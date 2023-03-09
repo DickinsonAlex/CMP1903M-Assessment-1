@@ -5,7 +5,7 @@ namespace CMP1903M_A01_2223
 {
     class Testing
     {
-        static void Main(string[] args)
+        public Testing()
         {
             //Create a new pack of cards
             Pack pack = new Pack();
@@ -29,7 +29,7 @@ namespace CMP1903M_A01_2223
                 }
                 finally
                 {
-                    if (success && (numCards < 1 || numCards > 52)) //Error trapping to see if the number is between 1 and 52
+                    if (success && (numCards < 1 && numCards > 52)) //Error trapping to see if the number is between 1 and 52
                     {
                         Console.WriteLine("Please enter a valid number between 1 and 52");
                     }
@@ -54,7 +54,7 @@ namespace CMP1903M_A01_2223
                 }
                 finally
                 {
-                    if (success && (shuffle < 1 || shuffle > 3)) //Error trapping to see if the number is between 1 and 3
+                    if (success && (shuffle < 1 && shuffle > 3)) //Error trapping to see if the number is between 1 and 3
                     {
                         Console.WriteLine("Please enter a valid number");
                     }
@@ -67,15 +67,11 @@ namespace CMP1903M_A01_2223
 
             //Deal the cards and add them to dealt cards
             List<Card> dealtCards = Pack.dealCards(numCards);
-
-            //Print the dealt cards
-            string[] suits = new string[] { "Clubs", "Diamonds", "Hearts", "Spades" }; //This is just to make the output look nicer
-            string[] values = new string[] { "Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
             
             Console.WriteLine("Dealt cards:");
             foreach (Card card in dealtCards)
             {
-                Console.WriteLine(values[card.Value -1] + " of " + suits[card.Suit-1]);
+                Console.WriteLine(card.ToString());
             }
         }
     }

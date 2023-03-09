@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CMP1903M_A01_2223
 {
@@ -9,45 +10,38 @@ namespace CMP1903M_A01_2223
 
         public Pack()
         {
-            //Initialise the card pack here
+            //Initialises the card pack
             pack = new List<Card>();
-            for (int suit = 1; suit <= 4; suit++)
+            for (int i = 0; i < 52; i++)
             {
-                for (int num = 1; num <= 13; num++)
-                {
-                    pack.Add(new Card(num, suit));
-                }
+                pack.Add(new Card((i % 13) + 1, (i / 13) + 1));
             }
         }
 
         public void riffleShuffle()
         {
-            //Riffle shuffle the pack
-            Random rnd = new Random();
-            int length = pack.Count;
-            int k = rnd.Next(length / 2);
-            int l = rnd.Next(length / 2);
-            while (length > 1)
+            int mid = (int)Math.Floor((decimal) pack.Count / 2); //Find mid point
+            List<Card> first = pack.Take(mid).ToList(); //First half
+            List<Card> second = pack.Skip(mid).Take(mid).ToList(); //Second half
+            List<Card> shuffled = new List<Card>(); 
+            for (int i = 0; i < mid; i++) //Alternate adding left and right half cards to the new list
             {
-                length--;
-                Card value = pack[k];
-                pack[k] = pack[l];
-                pack[l] = value;
+                shuffled.Add(first[i]);
+                shuffled.Add(second[i]);
             }
+            pack = shuffled;
         }
 
         public void fisherYatesShuffle()
         {
             //Fisher-Yates shuffle the pack
             Random rnd = new Random();
-            int length = pack.Count;
-            while (length > 1)
+            for (int i = 0; i < pack.Count; i++)
             {
-                length--;
-                int k = rnd.Next(length + 1);
-                Card value = pack[k];
-                pack[k] = pack[length];
-                pack[length] = value;
+                int randIndex = rnd.Next(i, pack.Count);
+                Card tempValue = pack[randIndex];
+                pack[randIndex] = pack[i];
+                pack[i] = tempValue;
             }
         }
         public void shuffleCardPack(int typeOfShuffle)
