@@ -12,7 +12,7 @@ namespace CMP1903M_A01_2223
         {
             //Initialises the card pack
             pack = new List<Card>();
-            for (int i = 0; i < 52; i++)
+            for (int i = 0; i < 52; i++) //Creates 52 cards, modulus is the value and devide is the suit
             {
                 pack.Add(new Card((i % 13) + 1, (i / 13) + 1));
             }
