@@ -44,7 +44,7 @@ namespace CMP1903M_A01_2223
                 pack[i] = tempValue;
             }
         }
-        public void shuffleCardPack(int typeOfShuffle)
+        public void shuffleCardPack(int typeOfShuffle) //Uses abstraction to break down the shuffle code into smaller methods
         {
             //Shuffles the pack based on the type of shuffle
             switch (typeOfShuffle)

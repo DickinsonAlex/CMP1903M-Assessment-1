@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CMP1903M_A01_2223
 {
-    class Testing
+    class Testing //This is an additional class to those provided by the base code
     {
         public Testing()
         {

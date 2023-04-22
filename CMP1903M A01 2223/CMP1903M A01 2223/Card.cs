@@ -9,7 +9,7 @@ namespace CMP1903M_A01_2223
         //Value: numbers 1 - 13
         //Suit: numbers 1 - 4
         private int _value;
-        public int Value
+        public int Value //Value is encapsulated using getters and setters
         {
             get
             {
@@ -28,7 +28,7 @@ namespace CMP1903M_A01_2223
             }
         }
         private int _suit;
-        public int Suit
+        public int Suit //Suit is encapsulated using getters and setters
         {
             get
             {
@@ -53,7 +53,7 @@ namespace CMP1903M_A01_2223
             Suit = suit;
         }
 
-        public override String ToString()
+        public override String ToString() //This is an additional method to those provided by the base code
         {
 
             String[] Suits = new String[4] { "Spades", "Hearts", "Clubs", "Diamonds" };
